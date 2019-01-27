@@ -13,19 +13,21 @@ bool isPerfectSquare(long double z)
 } 
   
 int main()
-{   int t;
+{   long long t;
 	cin>>t;
+
 	while(t--)
 	{    long long z,m;
 		//maximum amount;
 		cin>>z;
+			cout<<"\n";
 		
 		 if (isPerfectSquare(z) && (z+3)%3==0) 
 		{
 			m= (z+3)/3;
-			cout<<m<<"  "<<m-1<<"  "<<m-2<<"  ";
+			cout<<m<<"  "<<m-1<<"  "<<m-2;
 		}
-		else
+		else if (!isPerfectSquare(z) && (z+3)%3==0)
 		{
 			cout<<0<<"  "<<0<<"  "<<0<<"  ";
 		}
